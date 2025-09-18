@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Nexus AI Build</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    /* Video Modal Styles */
+    .video-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .video-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+    
+    .video-modal-content {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+    }
+    
+    .video-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .video-close:hover {
+      color: #ff5252;
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    @media (max-width: 768px) {
+      .video-modal-content {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="hero-content">
+              <h1 data-aos="fade-up" data-aos-delay="200">Hello, I'm <span class="highlight">Muhammad Tahir A.</span></h1>
+              <h2 data-aos="fade-up" data-aos-delay="300">Data Technology Professional <span class="typed" data-typed-items=" | AI Engineer and Modern Tech Full-Stack Developer"></span></h2>
+              <p data-aos="fade-up" data-aos-delay="400">
+                Hi, I'm Muhammad Tahir A — a Data Technology Professional and Modern Tech Full-Stack Developer. Over the past 8 years, I've had the opportunity to work with well-known companies and clients around the globe. Throughout my career, I've honed my skills in research, planning, requirement analysis, prioritization, and delivering high-quality products — not always perfect, but always close to expectations. 
+                This full-stack application is built using a modern tech stack and reflects my recent hands-on experience in full-stack development. I continuously explore, practice, build, and optimize as part of my development cycle.
+              </p>
+              <p>
+                With the rapid rise of AI and innovative tech ideas, there's a growing demand for launching MVPs (Minimum Viable Products) quickly. That's why I aimed to create a launch-ready platform with secure and reliable authentication, a professional SaaS-style UI, integrated payment systems, and a well-structured application foundation to meet modern startup needs.
+              </p>
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
+                <a href="portfolio.html" class="btn btn-primary">View My Work</a>
+                <a href="#" class="btn btn-primary" id="watch-video-btn">
+                  <i class="bi bi-play-circle"></i> Meet Me
+
+                  </a>
+              </div>
+              <div class="social-links" data-aos="fade-up" data-aos-delay="600">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/tahirtechinsights/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/tahirtechinsights/"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+              <div class="image-wrapper">
+                <img src="assets/img/profile/profile-square-11.png" alt="Muhammad Tahir A." class="img-fluid">
+                <div class="floating-elements">
+                  <div class="floating-card design" data-aos="fade-left" data-aos-delay="700">
+                    <i class="bi bi-palette"></i>
+                    <span>Design</span>
+                  </div>
+                  <div class="floating-card code" data-aos="fade-right" data-aos-delay="800">
+                    <i class="bi bi-code-slash"></i>
+                    <span>Code</span>
+                  </div>
+                  <div class="floating-card creativity" data-aos="fade-up" data-aos-delay="900">
+                    <i class="bi bi-lightbulb"></i>
+                    <span>Ideas</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="video-modal">
+      <div class="video-modal-content">
+        <span class="video-close" id="video-close">&times;</span>
+        <div class="video-container">
+          <!-- Replace VIDEO_ID with your actual YouTube video ID -->
+          <iframe id="youtube-video" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Nexus AI Build</strong> <span>All Rights Reserved<br></span></p>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://nexusaibuild.com/">Nexus AI Build</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    // Video Modal Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const videoModal = document.getElementById('video-modal');
+      const watchVideoBtn = document.getElementById('watch-video-btn');
+      const videoClose = document.getElementById('video-close');
+      const youtubeVideo = document.getElementById('youtube-video');
+      
+      // Function to open the modal
+      function openVideoModal() {
+        videoModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+      }
+      
+      // Function to close the modal
+      function closeVideoModal() {
+        videoModal.classList.remove('active');
+        document.body.style.overflow = ''; // Re-enable scrolling
+        
+        // Stop the video when modal is closed
+        const videoSrc = youtubeVideo.src;
+        youtubeVideo.src = '';
+        setTimeout(() => {
+          youtubeVideo.src = videoSrc;
+        }, 300);
+      }
+      
+      // Event listeners
+      watchVideoBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openVideoModal();
+      });
+      
+      videoClose.addEventListener('click', closeVideoModal);
+      
+      // Close modal when clicking outside the video
+      videoModal.addEventListener('click', function(e) {
+        if (e.target === videoModal) {
+          closeVideoModal();
+        }
+      });
+      
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+          closeVideoModal();
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
